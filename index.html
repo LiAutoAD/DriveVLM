@@ -9,6 +9,23 @@
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
     <link href="images/favicon.png" rel="shortcut icon"/>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -25,7 +42,7 @@
             <!-- <h3>A Simulator for <strong>Interactive</strong> Behaviour Simulations</h3> -->
             <p>
                 Xiaoyu Tian*<sup>1</sup>, Junru Gu*<sup>1</sup>, Bailin Li*<sup>2</sup>,
-                Yicheng Liu<sup>1</sup>, Chenxu Hu<sup>1</sup>, Yang Wang<sup>2</sup>,
+                Yicheng Liu<sup>1</sup>, Chenxu Hu<sup>1</sup>, Yang Wang<sup>2</sup>, Zhiyong Zhao<sup>2</sup>,
                 Kun Zhan<sup>2</sup>, Peng Jia<sup>2</sup>, Xianpeng Lang<sup>2</sup>,
                 Hang Zhao<sup>1</sup>
                 <!--                <a href="https://scholar.google.com/citations?user=D1KNQasAAAAJ&amp;hl=en&amp;authuser=1">Qiao-->
@@ -47,7 +64,8 @@
                 <ul class="icons">
                     <!--                    <li><a href="https://github.com/Tsinghua-MARS-Lab/StateTransformer"-->
                     <!--                           class="icon brands style2 fa-github"><span class="label">Github</span></a></li>-->
-                    <li><a href="https://arxiv.org/abs/2402.12289" class="icon style2 fa-file-pdf" target="_blank"><span class="label">Arxiv</span></a>
+                    <li><a href="https://arxiv.org/abs/2402.12289" class="icon style2 fa-file-pdf" target="_blank"><span
+                            class="label">Arxiv</span></a>
                     </li>
                 </ul>
             </div>
@@ -60,23 +78,29 @@
         </div>
     </section>
 
+    <section class="container" style="margin-top: 50px">
+        <video width="1080" controls>
+            <source src="videos/DriveVLM-CoRL-6-19-mp4_x264.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
 
     <section class="wrapper style1 align-left" id="third">
         <div class="inner">
             <h2>Abstract</h2>
             <p>
                 A primary hurdle of autonomous driving in urban environments is understanding complex and long-tail
-                scenarios, such as challenging road conditions and delicate human behaviors.
-                We introduce DriveVLM, an autonomous driving system leveraging Vision-Language Models (VLMs) for
-                enhanced scene understanding and planning capabilities. DriveVLM integrates a unique combination of
-                chain-of-thought (CoT) modules for scene description, scene analysis, and hierarchical planning.
-                Furthermore, recognizing the limitations of VLMs in spatial reasoning and heavy computational
-                requirements, we propose DriveVLM-Dual, a hybrid system that synergizes the strengths of DriveVLM with
-                the traditional autonomous driving pipeline. DriveVLM-Dual achieves robust spatial understanding and
-                real-time inference speed.
-                Extensive experiments on both the nuScenes dataset and our SUP-AD dataset demonstrate the effectiveness
-                of DriveVLM and the enhanced performance of DriveVLM-Dual, surpassing existing methods in complex and
-                unpredictable driving conditions.
+                scenarios, such as challenging road conditions and delicate human behaviors. We introduce DriveVLM, an
+                autonomous driving system leveraging Vision-Language Models (VLMs) for enhanced scene understanding and
+                planning capabilities. DriveVLM integrates a unique combination of reasoning modules for scene
+                description, scene analysis, and hierarchical planning. Furthermore, recognizing the limitations of VLMs
+                in spatial reasoning and heavy computational requirements, we propose DriveVLM-Dual, a hybrid system
+                that synergizes the strengths of DriveVLM with the traditional autonomous driving pipeline. Experiments
+                on both the nuScenes dataset and our SUP-AD dataset demonstrate the efficacy of DriveVLM and
+                DriveVLM-Dual in handling complex and unpredictable driving conditions. Finally, we deploy the
+                DriveVLM-Dual on a production vehicle, verifying it is effective in real-world autonomous driving
+                environments.
             </p>
         </div>
     </section>
