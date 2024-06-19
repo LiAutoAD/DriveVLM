@@ -15,15 +15,36 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
         }
+
         video {
             max-width: 100%;
             max-height: 100%;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background for better readability */
+            padding: 10px;
         }
     </style>
 </head>
@@ -58,13 +79,16 @@
                 <!--                <a href="https://hangzhaomit.github.io/">Hang Zhao</a><sup>1,4</sup>-->
             </p>
             <!--                        <h5><sup>1</sup> Shanghai Qi Zhi Institute, <sup>2</sup> Fudan University, <sup>3</sup> Pegasus Tech,-->
-            <sup>1</sup> IIIS, Tsinghua University, <sup>2</sup> Li Auto</h5>
+            <div style="margin-top: -20px">
+                <sup>1</sup> IIIS, Tsinghua University, <sup>2</sup> Li Auto</h5>
+            </div>
 
-            <div class="inner">
+            <div class="inner" style="margin-top: 20px">
                 <ul class="icons">
                     <!--                    <li><a href="https://github.com/Tsinghua-MARS-Lab/StateTransformer"-->
                     <!--                           class="icon brands style2 fa-github"><span class="label">Github</span></a></li>-->
-                    <li><a href="https://arxiv.org/abs/2402.12289" class="icon style2 fa-file-pdf" target="_blank"><span
+                    <li><a href="https://arxiv.org/abs/2402.12289" class="icon style2 fa-file-pdf"
+                           target="_blank"><span
                             class="label">Arxiv</span></a>
                     </li>
                 </ul>
@@ -74,17 +98,73 @@
             </ul>
         </div>
         <div class="image">
-            <img src="images/teaser.png" alt=""/>
+            <img src="images/teaser_real.png" alt=""/>
         </div>
+
     </section>
+
+    <!--    <section>-->
+    <!--        <div style="position: relative; width: 100%; height: 100vh;">-->
+    <!--            <img src="images/teaser_real.png" alt="Description of the image" class="full-width-image">-->
+    <!--            <div class="centered-text">-->
+    <!--                <div style="display: flex; flex-direction: column; align-items: center">-->
+    <!--                    &lt;!&ndash; <h1>InterSim</h1> &ndash;&gt;-->
+    <!--                    &lt;!&ndash; <p>* Denotes equal contribution</p> &ndash;&gt;-->
+    <!--                    <h2>DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models</h2>-->
+    <!--                    &lt;!&ndash; <h3>A Simulator for <strong>Interactive</strong> Behaviour Simulations</h3> &ndash;&gt;-->
+
+    <!--                    <div>-->
+    <!--                        <p>-->
+    <!--                            Xiaoyu Tian*<sup>1</sup>, Junru Gu*<sup>1</sup>, Bailin Li*<sup>2</sup>,-->
+    <!--                            Yicheng Liu<sup>1</sup>, Chenxu Hu<sup>1</sup>, Yang Wang<sup>2</sup>, Zhiyong-->
+    <!--                            Zhao<sup>2</sup>,-->
+    <!--                        </p>-->
+    <!--                    </div>-->
+    <!--                    <div style="margin-top: -30px">-->
+    <!--                        <p>-->
+    <!--                            Kun Zhan<sup>2</sup>, Peng Jia<sup>2</sup>, Xianpeng Lang<sup>2</sup>,-->
+    <!--                            Hang Zhao<sup>1</sup>-->
+    <!--                        </p>-->
+    <!--                    </div>-->
+
+    <!--                    &lt;!&ndash;                        <h5><sup>1</sup> Shanghai Qi Zhi Institute, <sup>2</sup> Fudan University, <sup>3</sup> Pegasus Tech,&ndash;&gt;-->
+
+    <!--                    <div style="display: flex; flex-direction: row">-->
+    <!--                        <sup>1</sup> IIIS, Tsinghua University, <sup>2</sup> Li Auto</h5>-->
+    <!--                    </div>-->
+
+    <!--                    <div class="inner">-->
+    <!--                        <ul class="icons">-->
+    <!--                            &lt;!&ndash;                    <li><a href="https://github.com/Tsinghua-MARS-Lab/StateTransformer"&ndash;&gt;-->
+    <!--                            &lt;!&ndash;                           class="icon brands style2 fa-github"><span class="label">Github</span></a></li>&ndash;&gt;-->
+    <!--                            <li><a href="https://arxiv.org/abs/2402.12289" class="icon style2 fa-file-pdf"-->
+    <!--                                   target="_blank"><span-->
+    <!--                                    class="label">Arxiv</span></a>-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                    <ul class="actions stacked">-->
+    <!--                        <li><a href="#third" class="button big wide smooth-scroll-middle">Learn More</a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+    <!--    </section>-->
+
+    <!--    <section class="container" style="margin-top: 50px">-->
+    <!--        <video width="1080" controls>-->
+    <!--            <source src="videos/DriveVLM-CoRL-6-19-mp4_x264.mp4" type="video/mp4">-->
+    <!--            Your browser does not support the video tag.-->
+    <!--        </video>-->
+    <!--    </section>-->
 
     <section class="container" style="margin-top: 50px">
-        <video width="1080" controls>
-            <source src="videos/DriveVLM-CoRL-6-19-mp4_x264.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/mt-SdHTTZzA?si=ZnbL5B_FNtdumFlE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-
 
     <section class="wrapper style1 align-left" id="third">
         <div class="inner">
@@ -139,98 +219,71 @@
 
     <!-- Relation prediction demos -->
 
-    <section class="wrapper style1 align-left">
-        <div class="inner">
-            <h2>Qualitative analysis</h2>
-            <!--            <p>-->
-            <!--                DriveVLM accurately predicts the current scene conditions and incorporates well-considered planning-->
-            <!--                decisions regarding the cyclist approaching us.-->
-            <!--                In the figure below, DriveVLM effectively comprehends the gesture of the traffic police ahead,-->
-            <!--                signaling the ego vehicle to proceed, and also considers the person riding a tricycle on the right side,-->
-            <!--                thereby making sensible driving decisions. These qualitative results demonstrate our model's exceptional-->
-            <!--                ability to understand complex scenarios and make driving plans.-->
-            <!--            </p>-->
-            <!--            <div style="display: flex">-->
-            <!--                <span class="image main"><img src="images/qualitative_1.png" alt=""></span>-->
-            <!--                <span class="image main"><img src="images/qualitative_2.png" alt=""></span>-->
-            <!--            </div>-->
-            <p>
-                In the figure below, the traffic police signaling to proceed with hand gestures has been accurately
-                captured by DriveVLM.
-            </p>
-            <div>
-                <span class="image main"><img src="images/vis_1.png" alt=""></span>
-            </div>
-            <p>
-                In the figure below, DriveVLM precisely detect the fallen tree and its position, subsequently planning
-                an appropriate detour trajectory.
-            </p>
-            <div>
-                <span class="image main"><img src="images/vis_2.png" alt=""></span>
-            </div>
-        </div>
-    </section>
-
-    <!--
-    <section class="wrapper style1 align-left">
-        <div class="inner">
-            <h2>Play with More Demos</h2>
-            <p>This visualization loops through 30 randomly chosen simulations with the Waymo Open Motion Dataset - Interactive Validation Subset.
-                The white vehicle is controlled by a fairly basic planner.
-                The yellow agents, if any, were detected as relevant agents and hence controlled by the simulator.
-                The red pin is the goal point assigned to the ego vehicle.
-            </p>
-            <p>Drag to move the center of the visualization in case of misalignment. </p>
-            <div class="spotlight", id="canvas">
-            </div>
-        </div>
-
-    </section>
+    <!--    <section class="wrapper style1 align-left">-->
+    <!--        <div class="inner">-->
+    <!--            <h2>Qualitative analysis</h2>-->
+    <!--            &lt;!&ndash;            <p>&ndash;&gt;-->
+    <!--            &lt;!&ndash;                DriveVLM accurately predicts the current scene conditions and incorporates well-considered planning&ndash;&gt;-->
+    <!--            &lt;!&ndash;                decisions regarding the cyclist approaching us.&ndash;&gt;-->
+    <!--            &lt;!&ndash;                In the figure below, DriveVLM effectively comprehends the gesture of the traffic police ahead,&ndash;&gt;-->
+    <!--            &lt;!&ndash;                signaling the ego vehicle to proceed, and also considers the person riding a tricycle on the right side,&ndash;&gt;-->
+    <!--            &lt;!&ndash;                thereby making sensible driving decisions. These qualitative results demonstrate our model's exceptional&ndash;&gt;-->
+    <!--            &lt;!&ndash;                ability to understand complex scenarios and make driving plans.&ndash;&gt;-->
+    <!--            &lt;!&ndash;            </p>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <div style="display: flex">&ndash;&gt;-->
+    <!--            &lt;!&ndash;                <span class="image main"><img src="images/qualitative_1.png" alt=""></span>&ndash;&gt;-->
+    <!--            &lt;!&ndash;                <span class="image main"><img src="images/qualitative_2.png" alt=""></span>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            </div>&ndash;&gt;-->
+    <!--            <p>-->
+    <!--                In the figure below, the traffic police signaling to proceed with hand gestures has been accurately-->
+    <!--                captured by DriveVLM.-->
+    <!--            </p>-->
+    <!--            <div>-->
+    <!--                <span class="image main"><img src="images/vis_1.png" alt=""></span>-->
+    <!--            </div>-->
+    <!--            <p>-->
+    <!--                In the figure below, DriveVLM precisely detect the fallen tree and its position, subsequently planning-->
+    <!--                an appropriate detour trajectory.-->
+    <!--            </p>-->
+    <!--            <div>-->
+    <!--                <span class="image main"><img src="images/vis_2.png" alt=""></span>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 
 
-    <section class="wrapper style1 align-left">
-        <div class="inner">
-            <h2>Contact Us</h2>
-            <p>
-                We release InterSim Beta as an open-source project.
-                We hope this tool can help the community push the frontline of interactive planning systems.
-                If you are enlightened, please consider citing our paper.
-                If you like our idea and want to give your planner a test, follow our easier-than-you-thought tutorials and fork our codes.
-                Moreover, building a realistic planning simulator is a big challenge demanding broad collaborations across multiple communities.
-                If you are annoyed by some bugs, unfinished functions, or lacking fundamental extensions,
-                please consider contributing your effort and building it for all.
-                And you are more than welcome to connect with us if you don't know where to start.
-            </p>
+    <!--    <section class="wrapper style1 align-left">-->
+    <!--        <div class="inner">-->
+    <!--            <h2>Contact Us</h2>-->
 
-            <div class="index align-left">
+    <!--            <div class="index align-left">-->
 
-                <form action="https://submit-form.com/3TNtd6SQ">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" value=""/>
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" value="">
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="5"></textarea>
-                        </div>
-                        <div class="field align-center">
-                            <ul class="actions">
-                                <li><input type="submit" name="submit" id="submit" value="Send This Message"></li>
-                            </ul>
-                        </div>
+    <!--                <form action="https://submit-form.com/3TNtd6SQ">-->
+    <!--                    <div class="fields">-->
+    <!--                        <div class="field half">-->
+    <!--                            <label for="name">Name</label>-->
+    <!--                            <input type="text" id="name" name="name" value=""/>-->
+    <!--                        </div>-->
+    <!--                        <div class="field half">-->
+    <!--                            <label for="email">Email</label>-->
+    <!--                            <input type="email" name="email" id="email" value="">-->
+    <!--                        </div>-->
+    <!--                        <div class="field">-->
+    <!--                            <label for="message">Message</label>-->
+    <!--                            <textarea name="message" id="message" rows="5"></textarea>-->
+    <!--                        </div>-->
+    <!--                        <div class="field align-center">-->
+    <!--                            <ul class="actions">-->
+    <!--                                <li><input type="submit" name="submit" id="submit" value="Send This Message"></li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
 
-                    </div>
+    <!--                    </div>-->
 
-                </form>
-            </div>
-        </div>
-    </section>
-    -->
+    <!--                </form>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 
     <section class="wrapper style1 align-center">
         <div class="inner">
