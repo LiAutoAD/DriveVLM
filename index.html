@@ -48,6 +48,17 @@
             background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background for better readability */
             padding: 10px;
         }
+
+        .my_class {
+            margin-top: -100px;
+            margin-bottom: -100px;
+            /*width: 1000px;*/
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*align-content: center;*/
+            /*align-items: center;*/
+        }
+
     </style>
 </head>
 <body class="is-preload">
@@ -168,7 +179,7 @@
     <!--        </video>-->
     <!--    </section>-->
 
-    <section class="container" style="margin-top: 50px; flex-direction: column; align-items: center">
+    <section class="container" style="margin-top: 0px; flex-direction: column; align-items: center">
         <div>
             <iframe width="900" height="506" src="https://www.youtube.com/embed/mt-SdHTTZzA?si=ZnbL5B_FNtdumFlE"
                     title="YouTube video player" frameborder="0"
@@ -188,52 +199,63 @@
 
     <section class="wrapper style1 align-left" id="third">
         <div class="inner">
-            <h2>Abstract</h2>
-            <p>
-                A primary hurdle of autonomous driving in urban environments is understanding complex and long-tail
-                scenarios, such as challenging road conditions and delicate human behaviors. We introduce DriveVLM, an
-                autonomous driving system leveraging Vision-Language Models (VLMs) for enhanced scene understanding and
-                planning capabilities. DriveVLM integrates a unique combination of reasoning modules for scene
-                description, scene analysis, and hierarchical planning. Furthermore, recognizing the limitations of VLMs
-                in spatial reasoning and heavy computational requirements, we propose DriveVLM-Dual, a hybrid system
-                that synergizes the strengths of DriveVLM with the traditional autonomous driving pipeline. Experiments
-                on both the nuScenes dataset and our SUP-AD dataset demonstrate the efficacy of DriveVLM and
-                DriveVLM-Dual in handling complex and unpredictable driving conditions. Finally, we deploy the
-                DriveVLM-Dual on a production vehicle, verifying it is effective in real-world autonomous driving
-                environments.
-            </p>
+            <div class="my_class">
+                <h2>Abstract</h2>
+                <p>
+                    A primary hurdle of autonomous driving in urban environments is understanding complex and long-tail
+                    scenarios, such as challenging road conditions and delicate human behaviors. We introduce DriveVLM,
+                    an
+                    autonomous driving system leveraging Vision-Language Models (VLMs) for enhanced scene understanding
+                    and
+                    planning capabilities. DriveVLM integrates a unique combination of reasoning modules for scene
+                    description, scene analysis, and hierarchical planning. Furthermore, recognizing the limitations of
+                    VLMs
+                    in spatial reasoning and heavy computational requirements, we propose DriveVLM-Dual, a hybrid system
+                    that synergizes the strengths of DriveVLM with the traditional autonomous driving pipeline.
+                    Experiments
+                    on both the nuScenes dataset and our SUP-AD dataset demonstrate the efficacy of DriveVLM and
+                    DriveVLM-Dual in handling complex and unpredictable driving conditions. Finally, we deploy the
+                    DriveVLM-Dual on a production vehicle, verifying it is effective in real-world autonomous driving
+                    environments.
+                </p>
+            </div>
         </div>
     </section>
 
     <section class="wrapper style1 align-left">
         <div class="inner">
-            <h2>DriveVLM</h2>
-            <p>DriveVLM accepts sequences of images as input and,
-                through a reasoning-based Chain-of-Thought (CoT) mechanism, outputs hierarchical planning predictions.
-                DriveVLM can optionally incorporate traditional 3D perception and trajectory planning modules to achieve
-                spatial reasoning capability and real-time trajectory planning.
-            </p>
-            <span class="image main"><img src="images/pipeline.png" alt=""></span>
+            <div class="my_class">
+                <h2>DriveVLM</h2>
+                <p>DriveVLM accepts sequences of images as input and,
+                    through a reasoning-based Chain-of-Thought (CoT) mechanism, outputs hierarchical planning
+                    predictions.
+                    DriveVLM can optionally incorporate traditional 3D perception and trajectory planning modules to
+                    achieve
+                    spatial reasoning capability and real-time trajectory planning.
+                </p>
+                <span class="image main"><img src="images/pipeline.png" alt=""></span>
+            </div>
         </div>
     </section>
 
     <section class="wrapper style1 align-left">
         <div class="inner">
-            <h2>Data Annotation</h2>
+            <div class="my_class">
+                <h2>Data Annotation</h2>
 
-            <p>Data mining and annotation pipeline for building a scene
-                understanding dataset:
-            </p>
-            <span class="image main"><img src="images/annotation.png" alt=""></span>
+                <p>Data mining and annotation pipeline for building a scene
+                    understanding dataset:
+                </p>
+                <span class="image main"><img src="images/annotation.png" alt=""></span>
 
-            <p>The figure below illustrates a sample scenario with detailed
-                annotations. We employ a group of annotators to
-                perform the scene annotation, including scene description,
-                scene analysis, and planning, except for waypoints, which
-                can be auto-labeled from the vehicle’s IMU recordings.
-            </p>
-            <span class="image main"><img src="images/dataset.png" alt=""></span>
-        </div>
+                <p>The figure below illustrates a sample scenario with detailed
+                    annotations. We employ a group of annotators to
+                    perform the scene annotation, including scene description,
+                    scene analysis, and planning, except for waypoints, which
+                    can be auto-labeled from the vehicle’s IMU recordings.
+                </p>
+                <span class="image main"><img src="images/dataset.png" alt=""></span>
+            </div>
     </section>
 
 
@@ -307,19 +329,22 @@
 
     <section class="wrapper style1 align-center">
         <div class="inner">
-            <h2>Citation</h2>
-            <blockquote style="text-align:left; background-color:#EEEEEE">
-                @misc{DriveVLM,<br>
-                title={DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models},<br>
-                author={Xiaoyu Tian and Junru Gu and Bailin Li and Yicheng Liu and Zhiyong Zhao and Yang Wang and Kun
-                Zhan
-                and Peng Jia and Xianpeng Lang and Hang Zhao},<br>
-                year={2024},<br>
-                eprint={2402.12289},<br>
-                archivePrefix={arXiv},<br>
-                primaryClass={cs.CV}<br>
-                }
-            </blockquote>
+            <div class="my_class">
+                <h2>Citation</h2>
+                <blockquote style="text-align:left; background-color:#EEEEEE">
+                    @misc{DriveVLM,<br>
+                    title={DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models},<br>
+                    author={Xiaoyu Tian and Junru Gu and Bailin Li and Yicheng Liu and Zhiyong Zhao and Yang Wang and
+                    Kun
+                    Zhan
+                    and Peng Jia and Xianpeng Lang and Hang Zhao},<br>
+                    year={2024},<br>
+                    eprint={2402.12289},<br>
+                    archivePrefix={arXiv},<br>
+                    primaryClass={cs.CV}<br>
+                    }
+                </blockquote>
+            </div>
         </div>
     </section>
 </div>
